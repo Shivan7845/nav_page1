@@ -1,0 +1,153 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+nav{
+    width: 100%;
+    height: 10vh;
+    padding: 0 3vmax;
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav > h1{
+    cursor: pointer;
+    font: 400 3vmax "Audiowide";
+}
+nav > h1:hover{
+    transform: translate(1px,1px);
+    text-shadow: 0 0 10px rgba(0, 0 ,0, 0.2);
+}
+nav > h3{
+    font: 700 1.5vmax "montserrat";
+    cursor: pointer;
+}
+
+.page1{
+    padding: 1vmax 0;
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items: center;
+    position: relative;
+}
+.page1 >h1{
+    font: 900 7vmax "Montserrat";
+    z-index: 1;
+}
+.p1-footer{
+    height: 5vmax;
+    width: 5vmax;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.p1-footer > h3{
+    font: 400 1.2vmax 'serif';
+}
+.p1-footer > hr{
+    width: 3px;
+    height: 3vmax;
+    background-color: black;
+    animation: updown 3s ease-in 2 both;
+}
+@keyframes updown{
+    0%{
+        height: 3vmax;
+    }
+    50%{
+        height: 1.5vmax;
+    }
+    75%{
+        height: 0.5vmax;
+    }
+    100%{
+        height: 3vmax;
+    }
+}
+.semi{
+    width: 20vmax;
+    height: 20vmax;
+    position: absolute;
+    bottom: 0;
+    left: 0%;
+    clip-path: circle(50.0% at 100% 50%);
+    background-color:#f1a32d;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    animation: center1 5s linear 1 forwards;
+}
+.quad1{
+    width: 20vmax;
+    height: 20vmax;
+    /* clip-path: circle(50% at 100% 100%); */
+    clip-path: circle(50.0% at 0 0);
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    background-color: #47A0E9;
+    animation: center2 5s linear 1 forwards;
+}
+
+.quad2{
+    width: 20vmax;
+    height:20vmax;
+    clip-path: circle(50.0% at 0 100%);
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    background-color: #E9C5D3;
+    animation: center3 5s linear 1 forwards;
+
+}
+@keyframes center1{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        background-color: #FFA219;
+        
+        transform: translateY(-25vh) translateX(150%);
+    }
+}
+@keyframes center2{
+    0%{
+        transform: translateX(0);
+
+    }
+    100%{
+        background-color: #FFA219;
+
+        transform: translateY(-4.5vh) translateX(-150%);
+    }
+}
+@keyframes center3{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        background-color: #FFA219;
+
+        transform: translateY(3.2vh)translateX(-150%)
+    }
+}
+.page1:hover .semi{
+    animation-play-state: paused;
+}
+.page1:hover .quad1{
+    animation-play-state: paused;
+    
+}
+.page1:hover .quad2{
+    animation-play-state: paused;
+    
+}
